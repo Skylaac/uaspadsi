@@ -97,4 +97,64 @@ class AbsensiController extends Controller
 
         return redirect()->route('absensi.index')->with('success', 'Data absensi berhasil dihapus.');
     }
+
+
+    // ============================
+    //   IMPORT CSV (FINAL VERSION)
+    // ============================
+    public function importCSV(Request $request)
+    {
+        // VALIDASI FILE CSV
+        $request->validate([
+            'file' => 'required|mimes:csv,txt'
+        ], [
+            'file.mimes' => 'File harus berformat CSV.'
+        ]);
+
+        try {
+            $file = $request->file('file');
+
+            if (($handle = fopen($file, 'r')) !== false) {
+
+                $skipHeader = true;
+
+                while (($data = fgetcsv($handle, 1000, ',')) !== false) {
+
+                    if ($skipHeader) {
+                        $skipHeader = false;
+                        continue;
+                    }
+
+                    // Pastikan user ada (hindari foreign key error)
+                    $user = User::where('id_user', $data[0])->first();
+                    if (!$user) {
+                        continue; // skip baris yang user-nya tidak valid
+                    }
+
+                    // Generate ID absensi baru otomatis
+                    $lastAbsensi = Absensi::latest('id_absensi')->first();
+                    $lastId = $lastAbsensi ? (int) substr($lastAbsensi->id_absensi, 1) : 0;
+                    $newId = 'A' . str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
+
+                    // Insert
+                    Absensi::create([
+                        'id_absensi' => $newId,
+                        'id_user'    => $data[0],
+                        'nama'       => $data[1],
+                        'keterangan' => $data[2],
+                        'jam_masuk'  => $data[3],
+                        'jam_pulang' => $data[4],
+                        'tanggal'    => $data[5],
+                    ]);
+                }
+
+                fclose($handle);
+            }
+
+            return back()->with('success', 'Data CSV berhasil diimport!');
+
+        } catch (\Throwable $e) {
+            return back()->with('error', 'Gagal mengimport CSV: ' . $e->getMessage());
+        }
+    }
 }

@@ -12,7 +12,7 @@
         <div>
             <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Karyawan</label>
             <select name="id_user" required
-                class="w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-gray-800">
                 <option value="">-- Pilih Karyawan --</option>
                 @foreach($users as $user)
                     <option value="{{ $user->id_user }}">{{ $user->nama }}</option>

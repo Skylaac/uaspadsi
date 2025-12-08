@@ -1,32 +1,63 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
-//use  App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\EvaluasiController;
 use App\Http\Controllers\UserController;
-
-//Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-//Route::post('/login', [AuthController::class, 'login'])->name('login.post');//
-//Route::get('/logout', [AuthController::class, 'logout'])->name('logout');//
-
-// Contoh halaman setelah login
-//Route::middleware('auth')->prefix('dashboard')->group(function () {
-    //Route::get('/', function () {
-  //      return view('dashboard');
-//    })->name('dashboard');//
+use App\Http\Controllers\DashboardController;
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+// ===============================
+// PUBLIC ROUTES (LOGIN)
+// ===============================
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::post('/login-proses', [AuthController::class, 'loginProses'])->name('login.proses');
+
+
+// ===============================
+// AUTHENTICATED ROUTES
+// ===============================
+Route::middleware(['auth'])->group(function () {
+
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
+    // ===============================
+    // EVALUASI ROUTES
+    // ===============================
+
+    // yang boleh dilihat semua user
+    Route::get('/evaluasi', [EvaluasiController::class, 'index'])->name('evaluasi.index');
+
+    // ROUTE OWNER
+    Route::middleware(['cekowner'])->group(function () {
+
+        Route::get('/evaluasi/create', [EvaluasiController::class, 'create'])->name('evaluasi.create');
+        Route::post('/evaluasi/store', [EvaluasiController::class, 'store'])->name('evaluasi.store');
+
+        Route::get('/evaluasi/{id}/edit', [EvaluasiController::class, 'edit'])->name('evaluasi.edit');
+        Route::put('/evaluasi/{id}/update', [EvaluasiController::class, 'update'])->name('evaluasi.update');
+
+        Route::delete('/evaluasi/{id}', [EvaluasiController::class, 'destroy'])->name('evaluasi.destroy');
+    });
+
+    // PENTING!!! — Letakkan route ini PALING BAWAH agar tidak bentrok
+    Route::get('/evaluasi/{id}', [EvaluasiController::class, 'show'])->name('evaluasi.show');
+
+
+    // ===============================
+    // RESOURCE ROUTES LAIN
+    // ===============================
+    Route::resource('absensi', AbsensiController::class);
+    Route::resource('jadwal', JadwalController::class);
+    Route::resource('users', UserController::class);
+
+    Route::post('/absensi/import', [AbsensiController::class, 'importCSV'])->name('absensi.import');
+
+
+    // Logout
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
-
-
-
-Route::resource('absensi', AbsensiController::class);
-Route::resource('jadwal', JadwalController::class);
-Route::resource('evaluasi', EvaluasiController::class);
-Route::resource('users', UserController::class);
-

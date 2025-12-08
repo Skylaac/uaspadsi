@@ -11,6 +11,8 @@ class Absensi extends Model
 
     protected $table = 'absensi';
     protected $primaryKey = 'id_absensi';
+    public $incrementing = true;
+    protected $keyType = 'int';
     protected $fillable = [
         'id_user', 'nama', 'keterangan', 'jam_masuk', 'jam_pulang', 'tanggal'
     ];

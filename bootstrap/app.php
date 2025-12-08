@@ -17,6 +17,9 @@ return Application::configure(basePath: dirname(__DIR__))
             HandleInertiaRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
         ]);
+        $middleware->alias([
+        'cekowner' => App\Http\Middleware\CekOwner::class,
+    ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

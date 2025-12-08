@@ -9,27 +9,28 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function showLoginForm()
+    public function loginForm()
     {
         return view('auth.login');
     }
 
-    public function login(Request $request)
+    public function loginProses(Request $request)
     {
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required',
+            'password' => 'required'
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        $credentials = $request->only('email', 'password');
 
-        if ($user && Hash::check($request->password, $user->password)) {
-            Auth::login($user);
-            $request->session()->regenerate();
-            return redirect()->route('dashboard')->with('success', 'Login berhasil!');
+        // Coba login menggunakan Auth::attempt (middleware auth butuh ini)
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate(); // penting untuk keamanan session
+            return redirect()->intended('/dashboard');
         }
 
-        return back()->withErrors(['email' => 'Email atau password salah'])->onlyInput('email');
+        // Jika gagal
+        return back()->with('error', 'Email atau password salah');
     }
 
     public function logout(Request $request)
@@ -37,6 +38,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login')->with('success', 'Berhasil logout.');
+
+        return redirect('/login');
     }
 }

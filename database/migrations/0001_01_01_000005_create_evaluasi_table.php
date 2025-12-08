@@ -10,6 +10,7 @@ return new class extends Migration {
         Schema::create('evaluasi', function (Blueprint $table) {
             $table->string('id_evaluasi', 10)->primary();
             $table->string('id_user', 10); // bukan id_karyawan
+            $table->string('nama', 100);
             $table->string('periode');
             $table->string('penilaian_kerja');
             $table->text('catatan')->nullable();

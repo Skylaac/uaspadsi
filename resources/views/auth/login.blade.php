@@ -4,44 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    @vite('resources/css/app.css')
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Login ke Sistem</h2>
+<body class="bg-light">
 
-        @if(session('success'))
-            <div class="bg-green-100 text-green-700 p-3 rounded mb-4">
-                {{ session('success') }}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+
+                <div class="card shadow">
+                    <div class="card-header text-center">
+                        <h3>Login</h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        {{-- alert error jika login gagal --}}
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        <form action="{{ route('login.proses') }}" method="POST">
+                            @csrf
+
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email"
+                                       name="email"
+                                       class="form-control"
+                                       placeholder="Masukkan email"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password"
+                                       name="password"
+                                       class="form-control"
+                                       placeholder="Masukkan password"
+                                       required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 mt-2">
+                                Login
+                            </button>
+                        </form>
+
+                    </div>
+
+                </div>
+
             </div>
-        @endif
-
-        @if($errors->any())
-            <div class="bg-red-100 text-red-700 p-3 rounded mb-4">
-                {{ $errors->first() }}
-            </div>
-        @endif
-
-        <form action="{{ route('login.process') }}" method="POST">
-            @csrf
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" name="email" value="{{ old('email') }}" required
-                    class="w-full border-gray-300 rounded-md p-2 focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
-
-            <div class="mb-6">
-                <label class="block text-sm font-medium text-gray-700">Password</label>
-                <input type="password" name="password" required
-                    class="w-full border-gray-300 rounded-md p-2 focus:ring-indigo-500 focus:border-indigo-500">
-            </div>
-
-            <button type="submit"
-                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-md transition">
-                Login
-            </button>
-        </form>
+        </div>
     </div>
 
 </body>

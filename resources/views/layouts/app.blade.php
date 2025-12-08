@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Dashboard')</title>
     @vite('resources/css/app.css')
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 </head>
 <body class="bg-gray-100 text-gray-800">
 
