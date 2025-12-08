@@ -8,11 +8,19 @@ use App\Models\User;
 
 class EvaluasiController extends Controller
 {
-    public function index()
-    {
-        $evaluasi = Evaluasi::with('user')->get();
-        return view('evaluasi.index', compact('evaluasi'));
-    }
+    public function index(Request $request)
+{
+    $penilaian = $request->penilaian; // ambil filter dari dropdown
+
+    $evaluasi = Evaluasi::with('user')
+        ->when($penilaian, function ($query) use ($penilaian) {
+            return $query->where('penilaian_kerja', $penilaian);
+        })
+        ->get();
+
+    return view('evaluasi.index', compact('evaluasi', 'penilaian'));
+}
+
 
     public function show($id)
     {

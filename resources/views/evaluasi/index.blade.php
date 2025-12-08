@@ -24,6 +24,22 @@
             </div>
         @endif
 
+
+        {{-- Filter Penilaian --}}
+        <form method="GET" action="{{ route('evaluasi.index') }}" class="mb-6">
+            <label class="text-gray-700 font-semibold mr-2">Filter Penilaian:</label>
+
+            <select name="penilaian" onchange="this.form.submit()"
+                class="border border-gray-300 bg-white px-3 py-2 rounded-md shadow-sm">
+                <option value="">Semua</option>
+                <option value="Sangat Baik" {{ request('penilaian') == 'Sangat Baik' ? 'selected' : '' }}>Sangat Baik</option>
+                <option value="Baik"        {{ request('penilaian') == 'Baik' ? 'selected' : '' }}>Baik</option>
+                <option value="Cukup"       {{ request('penilaian') == 'Cukup' ? 'selected' : '' }}>Cukup</option>
+                <option value="Kurang"      {{ request('penilaian') == 'Kurang' ? 'selected' : '' }}>Kurang</option>
+            </select>
+        </form>
+
+
         {{-- Table --}}
         <div class="overflow-x-auto shadow rounded-lg border border-gray-200">
             <table class="min-w-full text-sm">
@@ -54,9 +70,7 @@
                                 {{ $e->periode }}
                             </td>
 
-
-
-                            {{-- Badge Warna Penilaian --}}
+                            {{-- Badge warna --}}
                             <td class="px-6 py-3">
                                 @php
                                     $warna = [
@@ -67,8 +81,7 @@
                                     ];
                                 @endphp
 
-                                <span
-                                    class="px-3 py-1 rounded-full text-xs font-semibold {{ $warna[$e->penilaian_kerja] ?? 'bg-gray-100 text-gray-700' }}">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold {{ $warna[$e->penilaian_kerja] ?? 'bg-gray-100 text-gray-700' }}">
                                     {{ $e->penilaian_kerja }}
                                 </span>
                             </td>
@@ -77,10 +90,9 @@
                                 {{ $e->catatan }}
                             </td>
 
-                            {{-- Tombol Aksi --}}
+                            {{-- Aksi --}}
                             <td class="px-6 py-3 text-center">
                                 <div class="flex items-center justify-center gap-2">
-
 
                                     @if (Auth::user()->role === 'owner')
                                         <a href="{{ route('evaluasi.edit', $e->id_evaluasi) }}"
@@ -88,8 +100,9 @@
                                             Edit
                                         </a>
 
-                                        <form action="{{ route('evaluasi.destroy', $e->id_evaluasi) }}" method="POST"
-                                            onsubmit="return confirm('Hapus data ini?')">
+                                        <form action="{{ route('evaluasi.destroy', $e->id_evaluasi) }}" 
+                                              method="POST" 
+                                              onsubmit="return confirm('Hapus data ini?')">
                                             @csrf
                                             @method('DELETE')
 
@@ -103,21 +116,22 @@
                                             tidak memiliki akses
                                         </span>
                                     @endif
-                   
 
-        </div>
-        </td>
-        </tr>
+                                </div>
+                            </td>
 
-        @empty
-            <tr>
-                <td colspan="4" class="py-4 text-center text-gray-500">
-                    Belum ada data evaluasi.
-                </td>
-            </tr>
-            @endforelse
-            </tbody>
+                        </tr>
+
+                    @empty
+                        <tr>
+                            <td colspan="6" class="py-4 text-center text-gray-500">
+                                Belum ada data evaluasi.
+                            </td>
+                        </tr>
+                    @endforelse
+                </tbody>
             </table>
         </div>
-        </div>
-    @endsection
+
+    </div>
+@endsection
