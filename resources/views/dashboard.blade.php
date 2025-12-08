@@ -57,14 +57,46 @@ $chartPenilaian = [
         </p>
     </div>
 
-    {{-- Karyawan Aktif Hari Ini (Radial) --}}
-    <div id="chartAktifHariIni" class="bg-white p-6 rounded-xl shadow-md mb-6"></div>
-
     {{-- TOP 5 KEHADIRAN --}}
     <div id="chartTopKehadiran" class="bg-white p-6 rounded-xl shadow-md mb-6"></div>
 
     {{-- PENILAIAN KERJA --}}
-    <div id="chartPenilaianKerja" class="bg-white p-6 rounded-xl shadow-md mb-6"></div>
+    <div class="bg-white p-6 rounded-xl shadow-md mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        {{-- PIE CHART --}}
+        <div id="chartPenilaianKerja" class="col-span-2"></div>
+
+        {{-- LEGEND (KETERANGAN) --}}
+        <div class="flex flex-col justify-center">
+            <h3 class="text-lg font-semibold mb-3 text-gray-700">Keterangan Penilaian</h3>
+
+            <ul class="space-y-3 text-gray-700">
+
+                <li class="flex items-center">
+                    <span class="w-4 h-4 rounded-sm bg-[#3B82F6] mr-2"></span>
+                    Sangat Baik: <b>{{ $chartPenilaian['Sangat Baik'] }}</b>
+                </li>
+
+                <li class="flex items-center">
+                    <span class="w-4 h-4 rounded-sm bg-[#10B981] mr-2"></span>
+                    Baik: <b>{{ $chartPenilaian['Baik'] }}</b>
+                </li>
+
+                <li class="flex items-center">
+                    <span class="w-4 h-4 rounded-sm bg-[#F59E0B] mr-2"></span>
+                    Cukup: <b>{{ $chartPenilaian['Cukup'] }}</b>
+                </li>
+
+                <li class="flex items-center">
+                    <span class="w-4 h-4 rounded-sm bg-[#EF4444] mr-2"></span>
+                    Kurang: <b>{{ $chartPenilaian['Kurang'] }}</b>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
 
 
     {{-- IMPORT DATA --}}
@@ -198,24 +230,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // ======================================================
     // 3. Penilaian Kerja (Pie Chart)
     // ======================================================
-    var penilaianLabels = ['Sangat Baik', 'Baik', 'Cukup', 'Kurang'];
-    var penilaianValues = [
-        {{ $chartPenilaian['Sangat Baik'] }},
-        {{ $chartPenilaian['Baik'] }},
-        {{ $chartPenilaian['Cukup'] }},
-        {{ $chartPenilaian['Kurang'] }}
-    ];
-
     new ApexCharts(document.querySelector("#chartPenilaianKerja"), {
         chart: {
             type: 'pie',
             height: 360
         },
-        labels: penilaianLabels,
-        series: penilaianValues,
-        legend: {
-            position: 'bottom'
-        }
+        labels: ['Sangat Baik', 'Baik', 'Cukup', 'Kurang'],
+        series: [
+            {{ $chartPenilaian['Sangat Baik'] }},
+            {{ $chartPenilaian['Baik'] }},
+            {{ $chartPenilaian['Cukup'] }},
+            {{ $chartPenilaian['Kurang'] }}
+        ],
+        colors: ['#3B82F6', '#10B981', '#F59E0B', '#EF4444'],
+        legend: { show: false }
     }).render();
 
 });
