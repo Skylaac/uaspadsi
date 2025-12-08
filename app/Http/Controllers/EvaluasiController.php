@@ -28,11 +28,27 @@ class EvaluasiController extends Controller
 
     public function store(Request $request)
     {
+        // Ambil ID terakhir (string) misal EVL001
+        $last = Evaluasi::orderBy('id_evaluasi', 'DESC')->first();
+
+        if ($last) {
+            // Ambil angka dari ID terakhir (EVL012 -> 12)
+            $num = (int) substr($last->id_evaluasi, 3);
+            $nextNum = $num + 1;
+        } else {
+            $nextNum = 1; // jika belum ada data sama sekali
+        }
+
+        // Generate ID baru (EVL001, EVL002, ...)
+        $idEvaluasi = 'EVL' . str_pad($nextNum, 3, '0', STR_PAD_LEFT);
+
         Evaluasi::create([
-            'id_user' => $request->id_user,
-            'periode' => $request->periode,
+            'id_evaluasi'     => $idEvaluasi,
+            'id_user'         => $request->id_user,
+            'nama'            => User::where('id_user', $request->id_user)->value('name'),
+            'periode'         => $request->periode,
             'penilaian_kerja' => $request->penilaian_kerja,
-            'catatan' => $request->catatan,
+            'catatan'         => $request->catatan,
         ]);
 
         return redirect()->route('evaluasi.index')->with('success', 'Evaluasi berhasil ditambahkan');
@@ -51,10 +67,11 @@ class EvaluasiController extends Controller
         $data = Evaluasi::findOrFail($id);
 
         $data->update([
-            'id_user' => $request->id_user,
-            'periode' => $request->periode,
+            'id_user'         => $request->id_user,
+            'nama'            => User::where('id_user', $request->id_user)->value('name'),
+            'periode'         => $request->periode,
             'penilaian_kerja' => $request->penilaian_kerja,
-            'catatan' => $request->catatan,
+            'catatan'         => $request->catatan,
         ]);
 
         return redirect()->route('evaluasi.index')->with('success', 'Evaluasi berhasil diupdate');
