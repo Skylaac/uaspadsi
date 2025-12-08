@@ -49,24 +49,29 @@ $chartPenilaian = [
         <p class="text-lg text-blue-800 dark:text-blue-400">(Sistem Informasi Santai Kawan Kopi)</p>
     </div>
 
+   
+
+    {{-- TOP 5 KEHADIRAN --}}
+    <div id="chartTopKehadiran" class="bg-white p-6 rounded-xl shadow-md mb-6"></div>
+
+    {{-- TOTAL KARYAWAN + PENILAIAN KERJA (1 BARIS) --}}
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+
     {{-- TOTAL KARYAWAN --}}
-    <div class="bg-white p-6 rounded-xl shadow-md mb-6 text-center">
+    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center md:col-span-1">
         <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300">Total Karyawan</h3>
         <p class="text-5xl font-extrabold mt-3 text-blue-700 dark:text-blue-400">
             {{ $totalKaryawan }}
         </p>
     </div>
 
-    {{-- TOP 5 KEHADIRAN --}}
-    <div id="chartTopKehadiran" class="bg-white p-6 rounded-xl shadow-md mb-6"></div>
+    {{-- PIE CHART + LEGEND --}}
+    <div class="bg-white p-6 rounded-xl shadow-md md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
 
-    {{-- PENILAIAN KERJA --}}
-    <div class="bg-white p-6 rounded-xl shadow-md mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-
-        {{-- PIE CHART --}}
+        {{-- CHART --}}
         <div id="chartPenilaianKerja" class="col-span-2"></div>
 
-        {{-- LEGEND (KETERANGAN) --}}
+        {{-- LEGEND --}}
         <div class="flex flex-col justify-center">
             <h3 class="text-lg font-semibold mb-3 text-gray-700">Keterangan Penilaian</h3>
 
@@ -96,6 +101,9 @@ $chartPenilaian = [
         </div>
 
     </div>
+
+</div>
+
 
 
 
