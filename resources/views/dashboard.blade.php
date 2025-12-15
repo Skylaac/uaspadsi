@@ -49,68 +49,78 @@ $chartPenilaian = [
         <p class="text-lg text-blue-800 dark:text-blue-400">(Sistem Informasi Santai Kawan Kopi)</p>
     </div>
 
-   
 
-    {{-- TOP 5 KEHADIRAN --}}
-    <div id="chartTopKehadiran" class="bg-white p-6 rounded-xl shadow-md mb-6"></div>
-
-    {{-- TOTAL KARYAWAN + PENILAIAN KERJA (1 BARIS) --}}
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-
-    {{-- TOTAL KARYAWAN --}}
-    <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center md:col-span-1">
-        <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300">Total Karyawan</h3>
-        <p class="text-5xl font-extrabold mt-3 text-blue-700 dark:text-blue-400">
-            {{ $totalKaryawan }}
-        </p>
+    {{-- ================================
+         TOP 5 KEHADIRAN (with Title)
+    ================================= --}}
+    <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+        <h3 class="text-xl font-semibold text-gray-700 mb-4">Top 5 Kehadiran Karyawan</h3>
+        <div id="chartTopKehadiran"></div>
     </div>
 
-    {{-- PIE CHART + LEGEND --}}
-    <div class="bg-white p-6 rounded-xl shadow-md md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
 
-        {{-- CHART --}}
-        <div id="chartPenilaianKerja" class="col-span-2"></div>
+    {{-- ============================================================
+         TOTAL KARYAWAN + PIE CHART PENILAIAN (in one row)
+    ============================================================ --}}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
-        {{-- LEGEND --}}
-        <div class="flex flex-col justify-center">
-            <h3 class="text-lg font-semibold mb-3 text-gray-700">Keterangan Penilaian</h3>
+        {{-- TOTAL KARYAWAN --}}
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center md:col-span-1">
+            <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300">Total Karyawan</h3>
+            <p class="text-5xl font-extrabold mt-3 text-blue-700 dark:text-blue-400">
+                {{ $totalKaryawan }}
+            </p>
+        </div>
 
-            <ul class="space-y-3 text-gray-700">
+        {{-- PIE CHART + LEGEND --}}
+        <div class="bg-white p-6 rounded-xl shadow-md md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
 
-                <li class="flex items-center">
-                    <span class="w-4 h-4 rounded-sm bg-[#3B82F6] mr-2"></span>
-                    Sangat Baik: <b>{{ $chartPenilaian['Sangat Baik'] }}</b>
-                </li>
+            {{-- TITLE --}}
+            <div class="col-span-3 mb-3">
+                <h3 class="text-xl font-semibold text-gray-700">Distribusi Penilaian Kerja</h3>
+            </div>
 
-                <li class="flex items-center">
-                    <span class="w-4 h-4 rounded-sm bg-[#10B981] mr-2"></span>
-                    Baik: <b>{{ $chartPenilaian['Baik'] }}</b>
-                </li>
+            {{-- PIE CHART --}}
+            <div id="chartPenilaianKerja" class="col-span-2"></div>
 
-                <li class="flex items-center">
-                    <span class="w-4 h-4 rounded-sm bg-[#F59E0B] mr-2"></span>
-                    Cukup: <b>{{ $chartPenilaian['Cukup'] }}</b>
-                </li>
+            {{-- LEGEND --}}
+            <div class="flex flex-col justify-center">
+                <h3 class="text-lg font-semibold mb-3 text-gray-700">Keterangan Penilaian</h3>
 
-                <li class="flex items-center">
-                    <span class="w-4 h-4 rounded-sm bg-[#EF4444] mr-2"></span>
-                    Kurang: <b>{{ $chartPenilaian['Kurang'] }}</b>
-                </li>
+                <ul class="space-y-3 text-gray-700">
 
-            </ul>
+                    <li class="flex items-center">
+                        <span class="w-4 h-4 rounded-sm bg-[#3B82F6] mr-2"></span>
+                        Sangat Baik: <b>{{ $chartPenilaian['Sangat Baik'] }}</b>
+                    </li>
+
+                    <li class="flex items-center">
+                        <span class="w-4 h-4 rounded-sm bg-[#10B981] mr-2"></span>
+                        Baik: <b>{{ $chartPenilaian['Baik'] }}</b>
+                    </li>
+
+                    <li class="flex items-center">
+                        <span class="w-4 h-4 rounded-sm bg-[#F59E0B] mr-2"></span>
+                        Cukup: <b>{{ $chartPenilaian['Cukup'] }}</b>
+                    </li>
+
+                    <li class="flex items-center">
+                        <span class="w-4 h-4 rounded-sm bg-[#EF4444] mr-2"></span>
+                        Kurang: <b>{{ $chartPenilaian['Kurang'] }}</b>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
 
     </div>
-
-</div>
-
 
 
 
     {{-- IMPORT DATA --}}
     <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
 
-        {{-- NOTIFIKASI --}}
         @if (session('success'))
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 text-center">
             {{ session('success') }}
@@ -161,40 +171,7 @@ $chartPenilaian = [
 document.addEventListener("DOMContentLoaded", function () {
 
     // ======================================================
-    // 1. Karyawan Aktif Hari Ini (Radial)
-    // ======================================================
-    new ApexCharts(document.querySelector("#chartAktifHariIni"), {
-        series: [{{ $karyawanAktif }}],
-        chart: {
-            type: 'radialBar',
-            height: 330,
-            toolbar: { show: false }
-        },
-        colors: ['#10B981'],
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'light',
-                gradientToColors: ['#34D399'],
-                stops: [0, 100]
-            }
-        },
-        plotOptions: {
-            radialBar: {
-                hollow: { size: "60%" },
-                dataLabels: {
-                    name: { fontSize: '20px', offsetY: -10 },
-                    value: { fontSize: '36px', fontWeight: 'bold' }
-                }
-            }
-        },
-        labels: ['Karyawan Aktif']
-    }).render();
-
-
-
-    // ======================================================
-    // 2. Top 5 Kehadiran
+    // 1. Top 5 Kehadiran
     // ======================================================
     var names = {!! json_encode($top5->pluck('nama')) !!};
     var hadir = {!! json_encode($top5->pluck('total_hadir')) !!};
@@ -234,15 +211,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }).render();
 
 
-
     // ======================================================
-    // 3. Penilaian Kerja (Pie Chart)
+    // 2. Penilaian Kerja
     // ======================================================
     new ApexCharts(document.querySelector("#chartPenilaianKerja"), {
-        chart: {
-            type: 'pie',
-            height: 360
-        },
+        chart: { type: 'pie', height: 360 },
         labels: ['Sangat Baik', 'Baik', 'Cukup', 'Kurang'],
         series: [
             {{ $chartPenilaian['Sangat Baik'] }},
