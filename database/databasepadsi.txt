@@ -1,0 +1,126 @@
+LastSessions<|||>1<|||>Laragon.MySQL
+LastActiveSession<|||>1<|||>Laragon.MySQL
+ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,10
+ColsVisible_connform.ListSessions<|||>1<|||>0,1,4,6
+ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
+ColSort_connform.ListSessions<|||>1<|||>0,0
+ColWidths_frmTableEditor.listColumns<|||>1<|||>39,100,152,90,60,65,50,117,130,139,100,100
+ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
+ColWidths_frmTableEditor.treeIndexes<|||>1<|||>234,100,80,120,80
+ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
+ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
+ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>200,80,100,80,80,80
+ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listCheckConstraints<|||>1<|||>200,420
+ColsVisible_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
+ColPositions_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
+ColSort_frmTableEditor.listCheckConstraints<|||>1<|||>-1,0
+MainWinOnMonitor<|||>3<|||>0
+ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,50,50,50,50,50,50,50,120
+ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColSort_MainForm.ListDatabases<|||>1<|||>0,0
+ColWidths_MainForm.ListVariables<|||>1<|||>160,200,316
+ColsVisible_MainForm.ListVariables<|||>1<|||>0,1,2
+ColPositions_MainForm.ListVariables<|||>1<|||>0,1,2
+ColSort_MainForm.ListVariables<|||>1<|||>0,0
+ColWidths_MainForm.ListStatus<|||>1<|||>160,316,100,100
+ColsVisible_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColPositions_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColSort_MainForm.ListStatus<|||>1<|||>0,0
+ColWidths_MainForm.ListProcesses<|||>1<|||>70,80,80,80,80,50,50,191
+ColsVisible_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColPositions_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColSort_MainForm.ListProcesses<|||>1<|||>0,1
+ColWidths_MainForm.ListCommandStats<|||>1<|||>120,100,100,100,256
+ColsVisible_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColPositions_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColSort_MainForm.ListCommandStats<|||>1<|||>1,1
+ColWidths_MainForm.ListTables<|||>1<|||>120,70,70,120,120,70,100,50,70,70,70,70,70,90,120,70,70,70,50
+ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
+ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ColSort_MainForm.ListTables<|||>1<|||>0,0
+MainWinWidth<|||>3<|||>880
+MainWinHeight<|||>3<|||>465
+MainWinLeft<|||>3<|||>600
+MainWinTop<|||>3<|||>0
+querymemoheight<|||>3<|||>385
+DateTimeEditor_CursorPos_Type4<|||>3<|||>3
+sqloutheight<|||>3<|||>202
+MainWinMaximized<|||>3<|||>0
+FontSize<|||>3<|||>8
+SQLFile0<|||>1<|||>C:\laragon\www\laravelpadsi\database\Query padsi.sql
+SQLFile1<|||>1<|||>C:\laragon\bin\heidisql\Backups\query-tab-2025-11-03_00-04-19-872.sql
+SQLFile2<|||>1<|||>C:\laragon\www\laravelpadsi\database\Query.sql
+Servers\Laragon.MySQL\SessionCreated<|||>1<|||>2024-12-16 22:28:25
+Servers\Laragon.MySQL\Host<|||>1<|||>C:\laragon\www\laravelpadsi\database\database.sqlite
+Servers\Laragon.MySQL\WindowsAuth<|||>3<|||>0
+Servers\Laragon.MySQL\CleartextPluginEnabled<|||>3<|||>0
+Servers\Laragon.MySQL\User<|||>1<|||>
+Servers\Laragon.MySQL\Password<|||>1<|||>8
+Servers\Laragon.MySQL\LoginPrompt<|||>3<|||>0
+Servers\Laragon.MySQL\Port<|||>1<|||>0
+Servers\Laragon.MySQL\NetType<|||>3<|||>10
+Servers\Laragon.MySQL\Compressed<|||>3<|||>0
+Servers\Laragon.MySQL\LocalTimeZone<|||>3<|||>0
+Servers\Laragon.MySQL\QueryTimeout<|||>3<|||>30
+Servers\Laragon.MySQL\KeepAlive<|||>3<|||>20
+Servers\Laragon.MySQL\FullTableStatus<|||>3<|||>1
+Servers\Laragon.MySQL\Databases<|||>1<|||>
+Servers\Laragon.MySQL\Library<|||>1<|||>sqlite3.dll
+Servers\Laragon.MySQL\Comment<|||>1<|||>
+Servers\Laragon.MySQL\StartupScriptFilename<|||>1<|||>
+Servers\Laragon.MySQL\TreeBackground<|||>3<|||>536870911
+Servers\Laragon.MySQL\SSHtunnelActive<|||>3<|||>0
+Servers\Laragon.MySQL\SshExecutable<|||>1<|||>plink.exe
+Servers\Laragon.MySQL\SSHtunnelHost<|||>1<|||>
+Servers\Laragon.MySQL\SSHtunnelHostPort<|||>3<|||>22
+Servers\Laragon.MySQL\SSHtunnelUser<|||>1<|||>
+Servers\Laragon.MySQL\SSHtunnelPassword<|||>1<|||>3
+Servers\Laragon.MySQL\SSHtunnelTimeout<|||>3<|||>4
+Servers\Laragon.MySQL\SSHtunnelPrivateKey<|||>1<|||>
+Servers\Laragon.MySQL\SSHtunnelPort<|||>3<|||>3307
+Servers\Laragon.MySQL\SSL_Active<|||>3<|||>0
+Servers\Laragon.MySQL\SSL_Key<|||>1<|||>
+Servers\Laragon.MySQL\SSL_Cert<|||>1<|||>
+Servers\Laragon.MySQL\SSL_CA<|||>1<|||>
+Servers\Laragon.MySQL\SSL_Cipher<|||>1<|||>
+Servers\Laragon.MySQL\SSL_Verification<|||>3<|||>2
+Servers\Laragon.MySQL\IgnoreDatabasePattern<|||>1<|||>
+Servers\Laragon.MySQL\LogFileDdl<|||>3<|||>0
+Servers\Laragon.MySQL\LogFileDml<|||>3<|||>0
+Servers\Laragon.MySQL\LogFilePath<|||>1<|||>C:\Users\Leo\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
+Servers\Laragon.MySQL\ServerVersionFull<|||>1<|||>3.45.3
+Servers\Laragon.MySQL\ConnectCount<|||>3<|||>20
+Servers\Laragon.MySQL\ServerVersion<|||>3<|||>34503
+Servers\Laragon.MySQL\LastConnect<|||>1<|||>2025-12-15 21:22:31
+Servers\Laragon.MySQL\lastUsedDB<|||>1<|||>database
+Servers\Laragon.MySQL\database|absensi\Sort<|||>1<|||>1_jam_pulang|1_jam_masuk|
+Servers\Laragon.MySQL\database|user\Sort<|||>1<|||>0_nama|
+Servers\Laragon.MySQL\QueryHistory\1<|||>1<|||>2025-11-03 00:15:31|database|46|CREATE TABLE user (<{{{><}}}>    id_user INTEGER PRIMARY KEY AUTOINCREMENT,<{{{><}}}>    nama TEXT NOT NULL,<{{{><}}}>    email TEXT UNIQUE NOT NULL,<{{{><}}}>    password TEXT NOT NULL,<{{{><}}}>    role TEXT CHECK(role IN ('karyawan', 'owner')) DEFAULT 'karyawan',<{{{><}}}>    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP<{{{><}}}>);<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\2<|||>1<|||>2025-11-03 00:17:44|database|31|INSERT INTO user (nama, email, password, role)<{{{><}}}>VALUES ('Budi Santoso', 'budi@example.com', 'hashed_password', 'owner');<{{{><}}}><{{{><}}}>SELECT id_user, nama, email, role FROM user;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\3<|||>1<|||>2025-11-03 11:46:04|database|16|INSERT INTO user (nama, email, password, role) VALUES<{{{><}}}>('Siti Aulia', 'siti@example.com', 'hashed_password1', 'karyawan'),<{{{><}}}>('Rudi Hartono', 'rudi@example.com', 'hashed_password2', 'karyawan'),<{{{><}}}>('Dewi Lestari', 'dewi@example.com', 'hashed_password3', 'owner'),<{{{><}}}>('Andi Pratama', 'andi@example.com', 'hashed_password4', 'karyawan');<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\4<|||>1<|||>2025-11-03 11:56:32|database|0|CREATE TABLE jadwal_kerja (<{{{><}}}>    id_jadwal_kerja INTEGER PRIMARY KEY AUTOINCREMENT,<{{{><}}}>    id_karyawan INTEGER NOT NULL,<{{{><}}}>    tanggal DATE NOT NULL,<{{{><}}}>    jam_masuk TIME NOT NULL,<{{{><}}}>    jam_pulang TIME NOT NULL,<{{{><}}}>    shift TEXT CHECK(shift IN ('pagi', 'siang', 'malam')) NOT NULL,<{{{><}}}>    FOREIGN KEY (id_karyawan) REFERENCES user(id_user)<{{{><}}}>);<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\5<|||>1<|||>2025-11-03 11:56:51|database|16|CREATE TABLE absensi (<{{{><}}}>    id_absensi INTEGER PRIMARY KEY AUTOINCREMENT,<{{{><}}}>    id_karyawan INTEGER NOT NULL,<{{{><}}}>    nama TEXT NOT NULL,<{{{><}}}>    keterangan TEXT CHECK(keterangan IN ('hadir', 'izin', 'sakit', 'alpha')) DEFAULT 'hadir',<{{{><}}}>    jam_masuk TIME,<{{{><}}}>    jam_pulang TIME,<{{{><}}}>    tanggal DATE DEFAULT CURRENT_DATE,<{{{><}}}>    FOREIGN KEY (id_karyawan) REFERENCES user(id_user)<{{{><}}}>);<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\6<|||>1<|||>2025-11-03 11:57:01|database|0|CREATE TABLE evaluasi_kinerja (<{{{><}}}>    id_evaluasi INTEGER PRIMARY KEY AUTOINCREMENT,<{{{><}}}>    id_karyawan INTEGER NOT NULL,<{{{><}}}>    periode TEXT NOT NULL,<{{{><}}}>    penilaian_kerja TEXT NOT NULL,<{{{><}}}>    catatan TEXT,<{{{><}}}>    FOREIGN KEY (id_karyawan) REFERENCES user(id_user)<{{{><}}}>);<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\7<|||>1<|||>2025-11-03 12:01:30|database|15|INSERT INTO jadwal_kerja (id_karyawan, tanggal, jam_masuk, jam_pulang, shift) VALUES<{{{><}}}>(1, '2025-11-03', '08:00', '16:00', 'pagi'),<{{{><}}}>(2, '2025-11-03', '14:00', '22:00', 'siang'),<{{{><}}}>(3, '2025-11-04', '22:00', '06:00', 'malam'),<{{{><}}}>(4, '2025-11-04', '08:00', '16:00', 'pagi'),<{{{><}}}>(2, '2025-11-05', '14:00', '22:00', 'siang');<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\8<|||>1<|||>2025-11-03 12:01:44|database|15|INSERT INTO absensi (id_karyawan, nama, keterangan, jam_masuk, jam_pulang, tanggal) VALUES<{{{><}}}>(1, 'Budi Santoso', 'hadir', '08:05', '16:00', '2025-11-03'),<{{{><}}}>(2, 'Siti Aulia', 'izin', NULL, NULL, '2025-11-03'),<{{{><}}}>(3, 'Rudi Hartono', 'hadir', '21:50', '06:00', '2025-11-04'),<{{{><}}}>(4, 'Dewi Lestari', 'sakit', NULL, NULL, '2025-11-04'),<{{{><}}}>(2, 'Siti Aulia', 'hadir', '14:10', '22:00', '2025-11-05');<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\9<|||>1<|||>2025-11-03 12:01:53|database|15|INSERT INTO evaluasi_kinerja (id_karyawan, periode, penilaian_kerja, catatan) VALUES<{{{><}}}>(1, 'Oktober 2025', 'Sangat Baik', 'Disiplin dan produktif.'),<{{{><}}}>(2, 'Oktober 2025', 'Baik', 'Perlu peningkatan ketepatan waktu.'),<{{{><}}}>(3, 'Oktober 2025', 'Cukup', 'Perlu bimbingan dalam shift malam.'),<{{{><}}}>(4, 'Oktober 2025', 'Baik', 'Kinerja stabil meski sempat sakit.'),<{{{><}}}>(2, 'November 2025', 'Sangat Baik', 'Ada peningkatan yang signifikan.');<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\10<|||>1<|||>2025-11-18 13:52:29|database|0|SELECT <{{{><}}}>    nama,<{{{><}}}>    ROUND(AVG(<{{{><}}}>        (julianday('2000-01-01 ' || jam_pulang) - julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>    ), 2) AS rata_rata_jam<{{{><}}}>FROM absensi<{{{><}}}>WHERE keterangan = 'hadir'<{{{><}}}>  AND jam_masuk IS NOT NULL<{{{><}}}>  AND jam_pulang IS NOT NULL<{{{><}}}>GROUP BY nama<{{{><}}}>ORDER BY rata_rata_jam DESC;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\11<|||>1<|||>2025-11-18 13:54:58|database|0|WITH rata_per_karyawan AS (<{{{><}}}>    SELECT<{{{><}}}>        nama,<{{{><}}}>        AVG((julianday('2000-01-01 ' || jam_pulang) - julianday('2000-01-01 ' || jam_masuk)) * 24) AS rata_jam<{{{><}}}>    FROM absensi<{{{><}}}>    WHERE keterangan = 'hadir'<{{{><}}}>      AND jam_masuk IS NOT NULL<{{{><}}}>      AND jam_pulang IS NOT NULL<{{{><}}}>    GROUP BY nama<{{{><}}}>),<{{{><}}}>rata_tim AS (<{{{><}}}>    SELECT AVG(rata_jam) AS rata_tim<{{{><}}}>    FROM rata_per_karyawan<{{{><}}}>)<{{{><}}}><{{{><}}}>SELECT rpk.nama, ROUND(rpk.rata_jam, 2) AS rata_jam<{{{><}}}>FROM rata_per_karyawan rpk, rata_tim rt<{{{><}}}>WHERE rpk.rata_jam > rt.rata_tim<{{{><}}}>ORDER BY rpk.rata_jam DESC;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\12<|||>1<|||>2025-11-18 13:56:20|database|0|WITH rata_per_karyawan AS (<{{{><}}}>    SELECT<{{{><}}}>        nama,<{{{><}}}>        AVG(<{{{><}}}>            (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>             julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>        ) AS rata_jam<{{{><}}}>    FROM absensi<{{{><}}}>    WHERE keterangan = 'hadir'<{{{><}}}>      AND jam_masuk IS NOT NULL<{{{><}}}>      AND jam_pulang IS NOT NULL<{{{><}}}>    GROUP BY nama<{{{><}}}>),<{{{><}}}>rata_tim AS (<{{{><}}}>    SELECT AVG(rata_jam) AS rata_tim<{{{><}}}>    FROM rata_per_karyawan<{{{><}}}>)<{{{><}}}><{{{><}}}>SELECT <{{{><}}}>    rpk.nama,<{{{><}}}>    ROUND(rpk.rata_jam, 2) AS rata_rata_karyawan,<{{{><}}}>    ROUND(rt.rata_tim, 2) AS rata_rata_tim<{{{><}}}>FROM rata_per_karyawan rpk<{{{><}}}>CROSS JOIN rata_tim rt<{{{><}}}>WHERE rpk.rata_jam > rt.rata_tim<{{{><}}}>ORDER BY rpk.rata_jam DESC;<{{{><}}}><{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\13<|||>1<|||>2025-11-18 13:57:37|database|0|WITH rata_per_karyawan AS (<{{{><}}}>    SELECT<{{{><}}}>        nama,<{{{><}}}>        AVG(<{{{><}}}>            (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>             julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>        ) AS rata_jam<{{{><}}}>    FROM absensi<{{{><}}}>    WHERE keterangan = 'hadir'<{{{><}}}>      AND jam_masuk IS NOT NULL<{{{><}}}>      AND jam_pulang IS NOT NULL<{{{><}}}>      AND (julianday('2000-01-01 ' || jam_pulang) - <{{{><}}}>           julianday('2000-01-01 ' || jam_masuk)) * 24 > 0<{{{><}}}>    GROUP BY nama<{{{><}}}>),<{{{><}}}>rata_tim AS (<{{{><}}}>    SELECT AVG(rata_jam) AS rata_tim<{{{><}}}>    FROM rata_per_karyawan<{{{><}}}>)<{{{><}}}><{{{><}}}>SELECT <{{{><}}}>    rpk.nama,<{{{><}}}>    ROUND(rpk.rata_jam, 2) AS rata_rata_karyawan,<{{{><}}}>    ROUND(rt.rata_tim, 2) AS rata_rata_tim<{{{><}}}>FROM rata_per_karyawan rpk<{{{><}}}>CROSS JOIN rata_tim rt<{{{><}}}>WHERE rpk.rata_jam > rt.rata_tim<{{{><}}}>ORDER BY rpk.rata_jam DESC;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\14<|||>1<|||>2025-11-18 14:04:43|database|0|WITH rata_per_karyawan AS (<{{{><}}}>    SELECT<{{{><}}}>        nama,<{{{><}}}>        AVG(<{{{><}}}>            (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>             julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>        ) AS rata_jam<{{{><}}}>    FROM absensi<{{{><}}}>    WHERE keterangan = 'hadir'<{{{><}}}>      AND jam_masuk IS NOT NULL<{{{><}}}>      AND jam_pulang IS NOT NULL<{{{><}}}>      AND (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>           julianday('2000-01-01 ' || jam_masuk)) * 24 > 0<{{{><}}}>    GROUP BY nama<{{{><}}}>),<{{{><}}}>jumlah AS (<{{{><}}}>    SELECT COUNT(*) AS total_karyawan,<{{{><}}}>           SUM(rata_jam) AS total_jam<{{{><}}}>    FROM rata_per_karyawan<{{{><}}}>)<{{{><}}}><{{{><}}}>SELECT <{{{><}}}>    rpk.nama,<{{{><}}}>    ROUND(rpk.rata_jam, 2) AS rata_rata_karyawan,<{{{><}}}><{{{><}}}>    -- rata-rata karyawan lain (exclude self)<{{{><}}}>    ROUND(<{{{><}}}>        (j.total_jam - rpk.rata_jam) / (j.total_karyawan - 1),<{{{><}}}>        2<{{{><}}}>    ) AS rata_rata_karyawan_lain<{{{><}}}><{{{><}}}>FROM rata_per_karyawan rpk<{{{><}}}>CROSS JOIN jumlah j<{{{><}}}>ORDER BY rpk.rata_jam DESC;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\15<|||>1<|||>2025-11-18 14:05:40|database|0|WITH rata_per_karyawan AS (<{{{><}}}>    SELECT<{{{><}}}>        nama,<{{{><}}}>        AVG(<{{{><}}}>            (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>             julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>        ) AS rata_jam<{{{><}}}>    FROM absensi<{{{><}}}>    WHERE keterangan = 'hadir'<{{{><}}}>      AND jam_masuk IS NOT NULL<{{{><}}}>      AND jam_pulang IS NOT NULL<{{{><}}}>      AND (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>           julianday('2000-01-01 ' || jam_masuk)) * 24 > 0<{{{><}}}>    GROUP BY nama<{{{><}}}>)<{{{><}}}><{{{><}}}>SELECT <{{{><}}}>    ROUND(AVG(rata_jam), 2) AS rata_rata_seluruh_karyawan<{{{><}}}>FROM rata_per_karyawan;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\16<|||>1<|||>2025-11-18 14:08:04|database|0|WITH rata_per_karyawan AS (<{{{><}}}>    SELECT<{{{><}}}>        nama,<{{{><}}}>        AVG(<{{{><}}}>            (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>             julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>        ) AS rata_jam<{{{><}}}>    FROM absensi<{{{><}}}>    WHERE keterangan = 'hadir'<{{{><}}}>      AND jam_masuk IS NOT NULL<{{{><}}}>      AND jam_pulang IS NOT NULL<{{{><}}}>    GROUP BY nama<{{{><}}}>),<{{{><}}}>rata_tim AS (<{{{><}}}>    SELECT AVG(rata_jam) AS rata_tim<{{{><}}}>    FROM rata_per_karyawan<{{{><}}}>)<{{{><}}}><{{{><}}}>SELECT <{{{><}}}>    rpk.nama,<{{{><}}}>    ROUND(rpk.rata_jam, 2) AS rata_rata_karyawan,<{{{><}}}>    ROUND(rt.rata_tim, 2) AS rata_rata_tim<{{{><}}}>FROM rata_per_karyawan rpk<{{{><}}}>CROSS JOIN rata_tim rt<{{{><}}}>ORDER BY rpk.rata_jam DESC;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\17<|||>1<|||>2025-11-18 14:08:59|database|0|WITH rata_per_karyawan AS (<{{{><}}}>    SELECT<{{{><}}}>        nama,<{{{><}}}>        AVG(<{{{><}}}>            (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>             julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>        ) AS rata_jam<{{{><}}}>    FROM absensi<{{{><}}}>    WHERE keterangan = 'hadir'<{{{><}}}>      AND jam_masuk IS NOT NULL<{{{><}}}>      AND jam_pulang IS NOT NULL<{{{><}}}>    GROUP BY nama<{{{><}}}>),<{{{><}}}><{{{><}}}>-- hitung rata-rata tim tapi hanya yang jam kerjanya > 0<{{{><}}}>rata_tim AS (<{{{><}}}>    SELECT AVG(rata_jam) AS rata_tim<{{{><}}}>    FROM rata_per_karyawan<{{{><}}}>    WHERE rata_jam > 0<{{{><}}}>)<{{{><}}}><{{{><}}}>SELECT <{{{><}}}>    rpk.nama,<{{{><}}}>    ROUND(rpk.rata_jam, 2) AS rata_rata_karyawan,<{{{><}}}>    ROUND(rt.rata_tim, 2) AS rata_rata_tim<{{{><}}}>FROM rata_per_karyawan rpk<{{{><}}}>CROSS JOIN rata_tim rt<{{{><}}}>ORDER BY rpk.rata_jam DESC;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\18<|||>1<|||>2025-11-18 14:13:29|database|32|CREATE VIEW view_rata_karyawan AS<{{{><}}}>SELECT<{{{><}}}>    nama,<{{{><}}}>    AVG(<{{{><}}}>        (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>         julianday('2000-01-01 ' || jam_masuk)) * 24<{{{><}}}>    ) AS rata_jam<{{{><}}}>FROM absensi<{{{><}}}>WHERE jam_masuk IS NOT NULL<{{{><}}}>  AND jam_pulang IS NOT NULL<{{{><}}}>  AND (julianday('2000-01-01 ' || jam_pulang) -<{{{><}}}>       julianday('2000-01-01 ' || jam_masuk)) * 24 > 0<{{{><}}}>GROUP BY nama;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\19<|||>1<|||>2025-11-18 14:18:48|database|0|SELECT * FROM view_rata_karyawan;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\20<|||>1<|||>2025-11-18 14:24:30|database|0|SELECT <{{{><}}}>    nama,<{{{><}}}>    COUNT(jam_masuk) AS jumlah_masuk<{{{><}}}>FROM absensi<{{{><}}}>WHERE jam_masuk IS NOT NULL<{{{><}}}>GROUP BY nama<{{{><}}}>ORDER BY jumlah_masuk DESC<{{{><}}}>LIMIT 1;<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\21<|||>1<|||>2025-11-24 21:42:32|database|0|INSERT INTO users (id_user, nama, email, password, role, created_at, updated_at) VALUES<{{{><}}}>('USR006', 'Nina', 'nina@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR007', 'Ardi', 'ardi@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR008', 'Bella', 'bella@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR009', 'Dimas', 'dimas@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR010', 'Rina', 'rina@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);<{{{><}}}>
+Servers\Laragon.MySQL\QueryHistory\22<|||>1<|||>2025-11-25 17:19:37|database|32|INSERT INTO users (id_user, nama, email, password, role, created_at, updated_at) VALUES<{{{><}}}>('USR011', 'Syahla Sofia', 'syahla@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR012', 'Kumo Ardana', 'kumo@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR013', 'Sheilla Bella', 'sheilla@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR014', 'Grace Ruby', 'grace@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),<{{{><}}}>('USR015', 'Fortuna Natalina', 'fortuna@example.com', '$2y$10$exampleHashPassword1234567890', 'karyawan', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);<{{{><}}}>

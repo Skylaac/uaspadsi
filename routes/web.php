@@ -12,6 +12,8 @@ use App\Http\Controllers\DashboardController;
 // ===============================
 // PUBLIC ROUTES (LOGIN)
 // ===============================
+Route::redirect('/', '/login');
+
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
 Route::post('/login-proses', [AuthController::class, 'loginProses'])->name('login.proses');
 
