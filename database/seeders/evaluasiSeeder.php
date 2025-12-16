@@ -13,6 +13,7 @@ class evaluasiSeeder extends Seeder
             [
                 'id_evaluasi' => 'EV001',
                 'id_user' => 'USR001',
+                'nama' => 'Karyawan 1',
                 'periode' => 'Oktober 2025',
                 'penilaian_kerja' => 'Baik',
                 'catatan' => 'Tepat waktu dan disiplin.',
@@ -22,6 +23,7 @@ class evaluasiSeeder extends Seeder
             [
                 'id_evaluasi' => 'EV002',
                 'id_user' => 'USR002',
+                'nama' => 'Karyawan 2',
                 'periode' => 'Oktober 2025',
                 'penilaian_kerja' => 'Cukup',
                 'catatan' => 'Perlu peningkatan kehadiran.',
@@ -31,6 +33,7 @@ class evaluasiSeeder extends Seeder
             [
                 'id_evaluasi' => 'EV003',
                 'id_user' => 'USR003',
+                'nama' => 'Karyawan 3',
                 'periode' => 'Oktober 2025',
                 'penilaian_kerja' => 'Sangat Baik',
                 'catatan' => 'Kerja malam sangat konsisten.',
@@ -40,6 +43,7 @@ class evaluasiSeeder extends Seeder
             [
                 'id_evaluasi' => 'EV004',
                 'id_user' => 'USR004',
+                'nama' => 'Karyawan 4',
                 'periode' => 'September 2025',
                 'penilaian_kerja' => 'Baik',
                 'catatan' => 'Menunjukkan progres positif.',
@@ -49,6 +53,7 @@ class evaluasiSeeder extends Seeder
             [
                 'id_evaluasi' => 'EV005',
                 'id_user' => 'USR005',
+                'nama' => 'Karyawan 5',
                 'periode' => 'September 2025',
                 'penilaian_kerja' => 'Kurang',
                 'catatan' => 'Terlambat beberapa kali.',

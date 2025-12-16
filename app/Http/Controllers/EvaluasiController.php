@@ -35,32 +35,36 @@ class EvaluasiController extends Controller
     }
 
     public function store(Request $request)
-    {
-        // Ambil ID terakhir (string) misal EVL001
-        $last = Evaluasi::orderBy('id_evaluasi', 'DESC')->first();
+{
+    // VALIDASI FORM
+    $request->validate([
+        'id_user' => 'required|exists:users,id_user',
+        'periode' => 'required',
+        'penilaian_kerja' => 'required',
+        'catatan' => 'nullable',
+    ]);
 
-        if ($last) {
-            // Ambil angka dari ID terakhir (EVL012 -> 12)
-            $num = (int) substr($last->id_evaluasi, 3);
-            $nextNum = $num + 1;
-        } else {
-            $nextNum = 1; // jika belum ada data sama sekali
-        }
+    // AMBIL USER (PASTI ADA)
+    $user = User::where('id_user', $request->id_user)->firstOrFail();
 
-        // Generate ID baru (EVL001, EVL002, ...)
-        $idEvaluasi = 'EVL' . str_pad($nextNum, 3, '0', STR_PAD_LEFT);
+    // GENERATE ID EVALUASI
+    $last = Evaluasi::orderBy('id_evaluasi', 'DESC')->first();
+    $nextNum = $last ? ((int) substr($last->id_evaluasi, 3) + 1) : 1;
+    $idEvaluasi = 'EVL' . str_pad($nextNum, 3, '0', STR_PAD_LEFT);
 
-        Evaluasi::create([
-            'id_evaluasi'     => $idEvaluasi,
-            'id_user'         => $request->id_user,
-            'nama'            => User::where('id_user', $request->id_user)->value('name'),
-            'periode'         => $request->periode,
-            'penilaian_kerja' => $request->penilaian_kerja,
-            'catatan'         => $request->catatan,
-        ]);
+    // SIMPAN DATA
+    Evaluasi::create([
+        'id_evaluasi'     => $idEvaluasi,
+        'id_user'         => $user->id_user,
+        'nama'            => $user->nama, // ← AMAN, TIDAK NULL
+        'periode'         => $request->periode,
+        'penilaian_kerja' => $request->penilaian_kerja,
+        'catatan'         => $request->catatan,
+    ]);
 
-        return redirect()->route('evaluasi.index')->with('success', 'Evaluasi berhasil ditambahkan');
-    }
+    return redirect()->route('evaluasi.index')
+        ->with('success', 'Evaluasi berhasil ditambahkan');
+}
 
     public function edit($id)
     {
@@ -76,7 +80,7 @@ class EvaluasiController extends Controller
 
         $data->update([
             'id_user'         => $request->id_user,
-            'nama'            => User::where('id_user', $request->id_user)->value('name'),
+            'nama'            => User::where('id_user', $request->id_user)->value('nama'),
             'periode'         => $request->periode,
             'penilaian_kerja' => $request->penilaian_kerja,
             'catatan'         => $request->catatan,
