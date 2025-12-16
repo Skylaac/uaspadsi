@@ -4,41 +4,56 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use App\Models\User;
 
 class AuthController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | SHOW LOGIN FORM
+    |--------------------------------------------------------------------------
+    */
     public function loginForm()
     {
         return view('auth.login');
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | PROCESS LOGIN
+    |--------------------------------------------------------------------------
+    */
     public function loginProses(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'email'    => 'required|email',
             'password' => 'required'
         ]);
 
         $credentials = $request->only('email', 'password');
 
-        // Coba login menggunakan Auth::attempt (middleware auth butuh ini)
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate(); // penting untuk keamanan session
-            return redirect()->intended('/dashboard');
+            $request->session()->regenerate();
+
+            return redirect()->route('dashboard'); // KUNCI UTAMA
         }
 
-        // Jika gagal
-        return back()->with('error', 'Email atau password salah');
+        return back()->withErrors([
+            'email' => 'Email atau password salah'
+        ])->withInput();
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | LOGOUT
+    |--------------------------------------------------------------------------
+    */
     public function logout(Request $request)
     {
         Auth::logout();
+
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect()->route('login');
     }
 }
